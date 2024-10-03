@@ -1,0 +1,30 @@
+Split the numbers and add the numbers
+
+using System;
+namespace ConsoleApp1
+{
+   internal class Program
+   {
+    public static void Main(string[] args)
+    {
+       Console.WriteLine("Enter a string of numbers separated by underscores (e.g., 10_200_3_1):");
+       string input = Console.ReadLine();
+       int sum = 0;
+       string number = "";
+       for (int i = 0; i < input.Length; i++)
+       {
+        if (input[i] != '_')
+        {
+          number += input[i];
+        }
+        else
+        {
+          sum += int.Parse(number);
+          number = "";
+        }
+       }
+    sum += int.Parse(number);
+    Console.WriteLine(sum);
+    }
+   }
+}
