@@ -1,0 +1,35 @@
+Enter the names in the array and using stringbuilder generate "Name1 is 0 year old","Name2 is 1 year old","Name3 is 3 year old" etc.
+
+using System;
+using System.Text;
+
+
+
+
+
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+
+
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("Enter the number of names should wanted to enter");
+            int number = int.Parse(Console.ReadLine());
+            string[] names = new string[number];
+            for (int i = 0; i < names.Length; i++) {
+                Console.WriteLine("Enter the names" + i);
+                names[i] = Console.ReadLine();
+            }
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0;i < names.Length;i++)
+            {
+                sb.AppendLine($"{names[i]} is {i} years old");
+            }
+            Console.WriteLine(sb.ToString());
+        }
+    }
+}
