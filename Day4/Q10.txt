@@ -1,9 +1,6 @@
 Check whether the input read from the user contains vowels if yes then print the vowel in the input
 
 using System;
-using System.Linq;
-using System.Text;
-using System.Collections.Generic;
 
 namespace ConsoleApp1
 {

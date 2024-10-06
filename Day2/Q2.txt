@@ -1,0 +1,20 @@
+Print the last character of the input string.
+
+
+using System;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter the string");
+            string s = Console.ReadLine();
+
+            char lastChar = s[s.Length - 1];
+
+            Console.WriteLine($"Last character of {s} is '{lastChar}'");
+        }
+    }
+}

@@ -1,4 +1,5 @@
-Split the numbers and add the numbers
+Calculate the sum of numbers in the input string pattern.
+
 
 using System;
 namespace ConsoleApp1

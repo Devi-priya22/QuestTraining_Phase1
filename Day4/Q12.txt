@@ -1,0 +1,35 @@
+Count the number of same words in the input string.
+
+
+using System;
+
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            
+
+            Console.WriteLine("Enter the string : ");
+            string text = Console.ReadLine();
+            string[] words = text.Split(' ');
+            for (int i = 0; i < words.Length; i++)
+            {
+                int count = 0;
+                string word = words[i];
+                for (int j = 0; j < words.Length; j++)
+                {
+                    if (words[j] == word)
+                    {
+                        count++;
+                    }
+                       
+                }
+                Console.WriteLine($"{word}:{count}");
+            }
+      
+        }
+    }
+}

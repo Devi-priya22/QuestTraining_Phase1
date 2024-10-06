@@ -1,0 +1,28 @@
+Read elements and print sum of even numbers in the array
+
+using System;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        public static void Main(string[] args)
+        {
+            int[] array1 = new int[5];
+            int sum = 0;
+            for (int i = 0; i < array1.Length; i ++)
+            {
+                Console.WriteLine("Enter the elements in the array");
+                array1[i] = int.Parse(Console.ReadLine());
+            }
+            for (int i = 0; i < array1.Length; i ++)
+            {
+                if(array1[i] % 2 == 0)
+                {
+                    sum += array1[i];
+                }
+            }
+            Console.WriteLine(sum);
+        }
+    }
+}

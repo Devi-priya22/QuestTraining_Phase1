@@ -1,0 +1,42 @@
+Array with minimum two elements and user should enter elements and resize the array based on inputs and
+if q is entered exit and display sum of elements
+
+
+using System;
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        public static void Main(string[] args)
+        {
+            int[] array1 = new int[0];
+            int index = 0;
+            while (true)
+                {
+                    if (array1.Length < 2)
+                    {
+                        Console.WriteLine("Enter elements");
+                        Array.Resize(ref array1, array1.Length + 1);
+                        array1[index] = int.Parse(Console.ReadLine());
+                        index++;
+                        continue;
+                    }
+                    Console.WriteLine("Enter number or q to exit");
+                    string input = Console.ReadLine();
+                    if (input == "q")
+                    {
+                        break;
+                    }
+                    Array.Resize(ref array1, array1.Length + 1);
+                    array1[index] = int.Parse(input);
+                    index++;
+                } 
+            int sum = 0;
+            for (int i = 0; i < array1.Length; i++)
+            {
+                sum += array1[i];
+            }
+            Console.WriteLine(sum);
+        }
+    }
+}
