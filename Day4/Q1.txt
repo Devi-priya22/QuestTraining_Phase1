@@ -1,0 +1,69 @@
+From main read two numbers and operator based on operator perform operations 
+
+using System;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+
+        static int Addition(int number1, int number2)
+        {
+            return number1 + number2;
+        }
+        static int Sub(int number1, int number2)
+        {
+            return number1 - number2;
+        }
+        static int Mul(int number1, int number2)
+        {
+            return number1 * number2;
+        }
+        static int Div(int number1, int number2)
+        {
+            return number1 / number2;
+        }
+
+        static void Main(string[] args)
+        {
+            while (true) 
+            {
+                Console.WriteLine("Enter the number1:");
+                int number1 = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("Enter the number2:");
+                int number2 = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("Enter the operator (+, -, *, /):");
+                string op = Console.ReadLine();
+
+                int result = 0;
+
+                if (op == "+")
+                {
+                    result = Addition(number1, number2);
+                }
+                else if (op == "-")
+                {
+                    result = Sub(number1, number2);
+                }
+                else if (op == "*")
+                {
+                    result = Mul(number1, number2);
+                }
+                else if (op == "/")
+                {
+                    result = Div(number1, number2);
+                }
+                else
+                {
+                    Console.WriteLine("Invalid operator.");
+                    continue; 
+                }
+
+                Console.WriteLine("Result: " + result);
+                Console.WriteLine(); 
+            }
+        }
+    }
+}

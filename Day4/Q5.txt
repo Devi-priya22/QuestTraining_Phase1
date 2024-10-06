@@ -1,0 +1,23 @@
+Read a text from console and replace a word in the sentence with another word that user want 
+
+using System;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter the text");
+            string text = Console.ReadLine();
+            Console.WriteLine("Enter the word to replace");
+            string word = Console.ReadLine();
+            Console.WriteLine("Enter the word to add to the sentence instead of replace word");
+            string newWord = Console.ReadLine();
+            Console.WriteLine(text.Replace(word,newWord));
+
+        }
+    }
+}
+
+

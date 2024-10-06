@@ -1,0 +1,34 @@
+Read a character from the user and find out that character is present in an array of names that alreaady exists
+
+using System;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            var names = new string[] { "Abc", "Xyz", "Pqr" };
+            Console.WriteLine("Enter the name to search");
+            string name2 = Console.ReadLine();
+            bool nameFound = false;
+            for (int i = 0; i < names.Length; i++)
+
+            {
+                var n = names[i].ToLower();
+                if (n.Contains(name2.ToLower()))
+                {
+                    Console.WriteLine("Name found");
+                    nameFound = true;
+                    break;
+                }
+            }
+
+            if (!nameFound)
+            {
+                Console.WriteLine("Name not found");
+            }
+
+        }
+    }
+}

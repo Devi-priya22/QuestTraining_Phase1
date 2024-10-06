@@ -1,0 +1,28 @@
+Check whether a string is palindrome or not 
+
+using System;
+using System.Linq;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter the text");
+            string text = Console.ReadLine();
+            var reverse = string.Concat(text.Reverse());
+            if (text == reverse)
+            {
+                Console.WriteLine("It is palindrome");
+            }
+            else
+            {
+                Console.WriteLine("It is not palindrome");
+            }
+            
+          
+
+        }
+    }
+}

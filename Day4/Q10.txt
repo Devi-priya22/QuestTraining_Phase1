@@ -1,0 +1,33 @@
+Check whether the input read from the user contains vowels if yes then print the vowel in the input
+
+using System;
+using System.Linq;
+using System.Text;
+using System.Collections.Generic;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter the text");
+            string text = Console.ReadLine();
+            string result = "";
+            string[] vowels = new string[] { "A", "E", "I", "O", "U", "a", "e", "i", "o", "u" };
+
+            HashSet<char> encounteredVowels = new HashSet<char>();
+
+            foreach (var item in text)
+            {
+                if (vowels.Contains(item.ToString()) && !result.Contains(item))
+                {
+                    result += item;
+                    
+                }
+            }
+
+            Console.WriteLine("Vowels present: " + result);
+        }
+    }
+}
