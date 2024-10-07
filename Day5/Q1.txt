@@ -1,0 +1,22 @@
+Enter the date of birth from console and display the age
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        
+        Console.Write("Enter your birthdate (YYYY-MM-DD): ");
+        DateTime birthDate = DateTime.Parse(Console.ReadLine());
+
+        
+        DateTime currentDate = DateTime.Now;
+
+        
+        int age = currentDate.Year - birthDate.Year;
+
+        
+        Console.WriteLine("Your age is: " + age);
+    }
+}

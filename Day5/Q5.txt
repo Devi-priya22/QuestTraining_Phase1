@@ -1,0 +1,45 @@
+Represent 3 marks of 5 students each in a  dictionary
+
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        var studentMarks = new Dictionary<string, List<int>>();
+
+        for (int i = 1; i <= 3; i++)
+        {
+            Console.WriteLine($"Enter registration ID for student {i}:");
+            string regId = Console.ReadLine();
+
+        
+            if (studentMarks.ContainsKey(regId))
+            {
+                Console.WriteLine("This registration ID already exists. Please enter a unique registration ID.");
+                i--;
+                continue;
+            }
+
+            var marks = new List<int>();
+
+            Console.WriteLine($"Enter 3 marks for student with registration ID {regId}:");
+            for (int j = 0; j < 3; j++)
+            {
+                Console.WriteLine($"Enter mark {j + 1}:");
+                marks.Add(int.Parse(Console.ReadLine()));
+            }
+
+            studentMarks.Add(regId, marks);
+        }
+
+        Console.WriteLine("Marks of students based on registration IDs:");
+        foreach (var student in studentMarks)
+        {
+            Console.WriteLine($"Registration ID: {student.Key}, Marks: {string.Join(", ", student.Value)}");
+        }
+    }
+}
+
+

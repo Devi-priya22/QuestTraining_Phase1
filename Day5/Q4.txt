@@ -1,0 +1,29 @@
+Create array of list to Represent 3 marks of 5 students each in a  list
+
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        List<int>[] studentMarks = new List<int>[5];
+
+        for (int i = 0; i < studentMarks.Length; i++)
+        {
+            studentMarks[i] = new List<int>();
+            Console.WriteLine($"Enter 3 marks for student {i + 1}:");
+            for (int j = 0; j < 3; j++)
+            {
+                Console.WriteLine($"Enter mark {j + 1}:");
+                studentMarks[i].Add(int.Parse(Console.ReadLine()));
+            }
+        }
+
+        Console.WriteLine("Marks of 5 students:");
+        for (int i = 0; i < studentMarks.Length; i++)
+        {
+            Console.WriteLine($"Student {i + 1}: {string.Join(", ", studentMarks[i])}");
+        }
+    }
+}
