@@ -20,13 +20,13 @@ CREATE TABLE courses(
   fees INT NOT NULL
   )
 
-  INSERT INTO courses(id,student_name,course_name,fees) VALUES
-  (1,'name1','course1',1000),
-  (2,'name2','course2',2000),
-  (3,'name3','course1',1000),
-  (4,'name4','course2',2000),
-  (5,'name5','course1',1000)
+  INSERT INTO courses(student_name,course_name,fees) VALUES
+  ('name1','course1',1000),
+  ('name2','course2',2000),
+  ('name3','course1',1000),
+  ('name4','course2',2000),
+  ('name5','course1',1000)
 
   1- SELECT COUNT(id) AS total_students,course_name FROM courses GROUP BY course_name
   2-  SELECT course_name,SUM(fees) AS total_fees FROM courses GROUP BY course_name
-  3- SELECT TOP 1 course_name,COUNT(id) AS no_of_students_enrolled FROM courses ORDER BY COUNT(id) DESC
+  3- SELECT TOP 1 course_name,COUNT(id) AS no_of_students_enrolled FROM courses GROUP BY course_name ORDER BY COUNT(id) DESC
