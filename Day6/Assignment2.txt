@@ -61,9 +61,9 @@ doctor_name VARCHAR(50) NOT NULL,
 created_at DATETIME DEFAULT GETDATE()
 )
 
-INSERT INTO appoinments(patient_id,appointment_date,appointment_time,reason_for_visit,doctor_name,created_at) VALUES
-(10,'2024-10-10','10:10:10','Fever','Jithu','2024-9-10 10:10:10'),
-(12,'2024-10-10','10:10:10','Headache','Sankar','2024-9-10 10:10:10'),
-(15,'2024-10-10','10:10:10','Fever','Rajesh','2024-9-10 10:10:10'),
-(18,'2024-10-10','10:10:10','Headache','Anu','2024-9-10 10:10:10'),
-(20,'2024-10-10','10:10:10','Fever','Aju','2024-9-10 10:10:10')
+INSERT INTO appoinments(patient_id,appointment_date,appointment_time,reason_for_visit,doctor_name) VALUES
+(10,'2024-10-10','10:10:10','Fever','Jithu'),
+(12,'2024-10-10','10:10:10','Headache','Sankar'),
+(15,'2024-10-10','10:10:10','Fever','Rajesh'),
+(18,'2024-10-10','10:10:10','Headache','Anu'),
+(20,'2024-10-10','10:10:10','Fever','Aju')
