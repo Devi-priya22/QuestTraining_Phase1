@@ -41,12 +41,12 @@ created_at DATETIME DEFAULT GETDATE()
 )
 
 
-INSERT INTO patient(first_name,last_name,gender,age,phone_number,email,created_at) VALUES
-('Sachin','S','M',23,'9876543210','sachin@gmail.com','2024-9-10 10:10:10'),
-('Reenu','Saji','F',22,'9876533210','reenu@gmail.com','2024-9-10 10:10:10'),
-('Amal','Davis','M',23,'9876543211','amal@gmail.com','2024-9-10 10:10:10'),
-('Karthika','M','F',23,'9876563210','karthu@gmail.com','2024-9-10 10:10:10'),
-('Aadhi','N','M',26,'9874543210','aadhi@gmail.com','2024-9-10 10:10:10')
+INSERT INTO patient(first_name,last_name,gender,age,phone_number,email) VALUES
+('Sachin','S','M',23,'9876543210','sachin@gmail.com'),
+('Reenu','Saji','F',22,'9876533210','reenu@gmail.com'),
+('Amal','Davis','M',23,'9876543211','amal@gmail.com'),
+('Karthika','M','F',23,'9876563210','karthu@gmail.com'),
+('Aadhi','N','M',26,'9874543210','aadhi@gmail.com')
 
 appointements table
 
