@@ -1,0 +1,63 @@
+CREATE TABLE student
+(
+id INT PRIMARY KEY IDENTITY,
+name VARCHAR(50) NOT NULL
+)
+CREATE TABLE subject
+(
+id INT PRIMARY KEY IDENTITY,
+subject_name VARCHAR(50) NOT NULL,
+subject_code VARCHAR(50) NOT NULL
+)
+CREATE TABLE exam
+(
+id INT PRIMARY KEY IDENTITY,
+min_mark INT NOT NULL,
+max_mark INT NOT NULL,
+exam_name VARCHAR(50) NOT NULL
+)
+CREATE TABLE mark
+(
+id INT PRIMARY KEY IDENTITY,
+examid INT NOT NULL,
+subjectid INT NOT NULL,
+studentid INT NOT NULL,
+mark INT NOT NULL,
+CONSTRAINT FK_exam_id FOREIGN KEY (examid) REFERENCES exam(id),
+CONSTRAINT FK_subject_id FOREIGN KEY (subjectid) REFERENCES subject(id),
+CONSTRAINT FK_student_id FOREIGN KEY (studentid) REFERENCES student(id),
+)
+
+INSERT INTO student VALUES
+('Sachin'),
+('Reenu'),
+('Karthika'),
+('Amal'),
+('Aadhi')
+INSERT INTO subject VALUES
+('Mathematics', 'MATH101'),
+('Physics', 'PHY101'),
+('Chemistry','CHEM101'),
+('Data structures','CST102'),
+('Operating system','CST109')
+
+INSERT INTO exam VALUES
+(40,100,'S1'),
+(40,100,'S2'),
+(40,100,'S3'),
+(40,100,'S4'),
+(40,100,'S5')
+
+INSERT INTO mark VALUES
+(1,1,1,75),
+(2,3,3,80),
+(3,1,2,65),
+(1,2,4,90),
+(4,5,2,45)
+
+SELECT student.id,student.name
+FROM mark 
+INNER JOIN 
+student ON mark.studentid = student.id
+
+
