@@ -1,0 +1,93 @@
+create table Customers(
+  ID int primary key identity,
+  AccNo bigint,
+  Name varchar(50),
+  PhoneNo varchar(10),
+  BankBalance bigint check(BankBalance >= 0)
+);
+
+create table Transactions(
+  TransID int primary key identity,
+  TransType varchar(20) check(TransType in ('Withdraw','Deposit','Transfer')),
+  TransDate datetime,
+  SenderID int,
+  ReceiverID int,
+  Amount bigint,
+  
+  
+  constraint fk_sender_id foreign key(SenderID) references Customers(ID),
+  constraint fk_rece_id foreign key(ReceiverID) references Customers(ID)
+);
+
+INSERT INTO Customers (AccNo, Name, PhoneNo, BankBalance) VALUES
+(1001, 'Alice Johnson', '1234567890', 5000),
+(1002, 'Bob Smith', '0987654321', 3000),
+(1003, 'Charlie Brown', '5551234567', 7000),
+(1004, 'Diana Prince', '5559876543', 2500),
+(1005, 'Eve Adams', '6668889999', 6000),
+(1006, 'Frank Castle', '7775554444', 1500),
+(1007, 'Grace Lee', '8882223333', 9000),
+(1008, 'Hannah White', '9993334444', 3500),
+(1009, 'Ivy Green', '4446667777', 1200),
+(1010, 'Jack Black', '1112223333', 4500);
+
+INSERT INTO Transactions (TransType, TransDate, SenderID, ReceiverID, Amount) VALUES
+('Deposit', '2024-10-01 10:00:00', 1, NULL, 1500),
+('Withdraw', '2024-10-02 11:30:00', 2,  NULL, 500),
+('Transfer', '2024-10-03 14:15:00', 3,  4,  1000),
+('Deposit', '2024-10-04 09:45:00', 4,  NULL,  300),
+('Withdraw', '2024-10-05 15:00:00', 5,  NULL,200),
+('Transfer', '2024-10-06 12:30:00', 6,  7,  100),
+('Deposit', '2024-10-07 08:00:00', 8,  NULL, 500),
+('Withdraw', '2024-10-08 16:45:00', 9,  NULL,  300),
+('Transfer', '2024-10-09 13:20:00', 10,  1,  250),
+('Deposit', '2024-10-10 09:10:00', 2,  NULL,  1000);
+--Deposit money
+update Customers
+set BankBalance = BankBalance+1500
+where ID=5;
+
+update Customers
+set BankBalance = BankBalance+150
+where ID=1;
+
+update Customers
+set BankBalance = BankBalance+1000
+where ID=2;
+--Withdraw money
+update Customers
+set BankBalance = BankBalance-150
+where ID=3;
+
+update Customers
+set BankBalance = BankBalance-100
+where ID=4;
+
+--update query
+update Customers 
+set PhoneNo=9876543212
+Where ID = 5;
+
+--Query for transactions view
+
+select 
+SenderID as sender,
+ReceiverID as receiver,
+Amount,
+TransDate as date
+from Transactions;
+
+--Query for displaying all transactions did by customer id 2
+
+select Customers.Name as Name,
+Customers.AccNo as account_Number,
+Customers.PhoneNo as phone_number,
+Transactions.TransID as transaction_id,
+Transactions.TransType as transaction_type,
+Transactions.TransDate as transaction_date
+From Customers
+INNER JOIN Transactions
+ON Customers.ID = Transactions.SenderID
+Where Customers.ID = 2;
+   
+  
