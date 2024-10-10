@@ -299,6 +299,21 @@ exec enter_sale
   @sale_date = '2024-02-02',
   @total_price = 49.00;
 
+-- Write an INSERT query to add a new medication, "Paracetamol", to the medications table with a price of 2.50 per unit and a stock quantity of 100.
+
+INSERT INTO Medications (name, category, price, expiry_date, supplier_id, stock_quantity)
+VALUES ('Paracetamol', 'Pain Relief', 2.50, '2026-01-01', 1, 100);
+
+--Write an INSERT query to add a new supplier "HealthCorp" into the suppliers table.
+
+INSERT INTO Suppliers (name, contact_person, phone, email, address)
+VALUES ('HealthCorp', 'David Johnson', 1234567890, 'contact@healthcorp.com', '987 Health St, City Z');
+
+--Write an INSERT query to register a new customer with the name "John Doe" and contact details in the customers table.
+
+INSERT INTO Customers (name, phone, email, address)
+VALUES ('John Doe', 9876543210, 'johndoe@example.com', '123 Customer Ln, City X');
+
 
 
 
