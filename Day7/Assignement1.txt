@@ -22,7 +22,7 @@ id INT PRIMARY KEY IDENTITY,
 examid INT NOT NULL,
 subjectid INT NOT NULL,
 studentid INT NOT NULL,
-mark INT NOT NULL,
+marks INT NOT NULL,
 CONSTRAINT FK_exam_id FOREIGN KEY (examid) REFERENCES exam(id),
 CONSTRAINT FK_subject_id FOREIGN KEY (subjectid) REFERENCES subject(id),
 CONSTRAINT FK_student_id FOREIGN KEY (studentid) REFERENCES student(id),
@@ -59,5 +59,28 @@ SELECT student.id,student.name
 FROM mark 
 INNER JOIN 
 student ON mark.studentid = student.id
+
+SELECT student.id,student.name,subject.subject_name,mark.marks
+FROM mark
+INNER JOIN 
+student on mark.studentid = student.id
+INNER JOIN 
+subject on mark.subjectid = subject.id
+WHERE 
+subject.subject_name = 'Physics'
+
+
+SELECT student.id,student.name,exam.id,exam.exam_name,mark.marks
+FROM student
+INNER JOIN 
+mark on student.id = mark.studentid
+INNER JOIN 
+subject on mark.subjectid = student.id
+INNER JOIN 
+exam on exam.id = mark.examid
+WHERE 
+student.id = 1
+
+
 
 
