@@ -1,0 +1,193 @@
+using System;
+using System.Collections.Generic;
+
+namespace ExamAssessment
+{
+    internal class Program
+    {
+        static List<string> departments = new List<string>();
+        static Dictionary<string, Dictionary<string, string>> doctors = new Dictionary<string, Dictionary<string, string>>();
+        static Dictionary<string, Dictionary<string, string>> patients = new Dictionary<string, Dictionary<string, string>>();
+
+        static void Main(string[] args)
+        {
+            while (true)
+            {
+                Console.WriteLine("WELCOME TO HOSPITAL MANAGEMENT SYSTEM");
+                Console.WriteLine("1. Add Department");
+                Console.WriteLine("2. Add Doctor");
+                Console.WriteLine("3. Admit Patient");
+                Console.WriteLine("4. List Doctors");
+                Console.WriteLine("5. List Patients");
+                Console.WriteLine("6. Display departments");
+                Console.WriteLine("7. Display doctors");
+                Console.WriteLine("8. DisplayPatients");
+                Console.WriteLine("9. Exit");
+                Console.Write("Enter your choice: ");
+                int choice = int.Parse(Console.ReadLine());
+                switch (choice)
+                {
+                    case 1:
+                        AddDepartment();
+                        break;
+                    case 2:
+                        AddDoctor();
+                        break;
+                    case 3:
+                        AdmitPatient();
+                        break;
+                    case 4:
+                        ListDoctors();
+                        break;
+                    case 5:
+                        ListPatient();
+                        break;
+                    case 6:
+                        DisplayDepartment();
+                        break;
+                    case 7:
+                        DisplayDoctor();
+                        break;
+                    case 8:
+                        DisplayPatient();
+                        break;
+                    case 9:
+                        return;
+                }
+            }
+        }
+        public static void AddDepartment()
+        {
+            Console.Write("Enter the department name: ");
+            string departmentName = Console.ReadLine();
+            if (!departments.Contains(departmentName))
+            {
+                departments.Add(departmentName);
+                Console.WriteLine("Department added.");
+            }
+            else
+            {
+                Console.WriteLine("Department already exists.");
+            }
+        }
+        public static void AddDoctor()
+        {
+            Console.Write("Enter the doctor's name: ");
+            string doctorName = Console.ReadLine();
+            Console.Write("Enter the department: ");
+            string department = Console.ReadLine();
+            if (departments.Contains(department))
+            {
+                if (!doctors.ContainsKey(doctorName))
+                {
+                    doctors.Add(doctorName, new Dictionary<string, string>
+                    {
+                        { "Department", department }
+                    });
+                    Console.WriteLine("Doctor added.");
+                }
+                else
+                {
+                    Console.WriteLine("Doctor name is already exists.");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Department not found.");
+            }
+        }
+        public static void AdmitPatient()
+        {
+            Console.Write("Enter the patient's name: ");
+            string patientName = Console.ReadLine();
+            Console.Write("Enter the department name: ");
+            string department = Console.ReadLine();
+            Console.Write("Enter the doctor's name: ");
+            string doctorName = Console.ReadLine();
+            if (departments.Contains(department))
+            {
+                if (doctors.ContainsKey(doctorName))
+                {
+                    string doctorDepartment = doctors[doctorName]["Department"];
+                    if (doctorDepartment == department)
+                    {
+                        patients.Add(patientName, new Dictionary<string, string>
+                        {
+                            { "Name", patientName },
+                            { "DoctorName", doctorName },
+                            { "Admitted", "Yes" }
+                        });
+                        Console.WriteLine("Patient admitted.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Doctor not found in the specific department.");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Doctor not found.");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Department not found.");
+            }
+        }
+       public static void ListDoctors()
+        {
+            Console.Write("Enter the department: ");
+            string department = Console.ReadLine();
+            Console.WriteLine("Doctors:");
+            foreach (var doctor in doctors)
+            {
+                var departments = doctor.Value;
+                if (departments["Department"] == department)
+                {
+                    Console.WriteLine($"Doctor Name:{doctor.Key}");
+                }
+            }
+        }
+        public static void ListPatient()
+        {
+            Console.Write("Enter the doctor's name: ");
+            string doctorName = Console.ReadLine();
+            Console.WriteLine("Patients");
+            foreach (var patient in patients)
+            {
+                var doctornames = patient.Value;
+                if (doctornames["DoctorName"] == doctorName)
+                {
+                    Console.WriteLine($"Patient Name: {patient.Key}");
+                }
+            }
+        }
+        public static void DisplayDepartment()
+        {
+            Console.WriteLine("Departments:");
+            foreach (var department in departments)
+            {
+                Console.WriteLine($"Department:{department}");
+            }
+        }
+        public static void DisplayDoctor()
+        {
+            Console.WriteLine("Doctors:");
+            foreach (var doctor in doctors)
+            {
+                Console.WriteLine($"Name:{doctor.Key} Department: {doctor.Value["Department"]}");
+            }
+        }
+        public static void DisplayPatient()
+        {
+            Console.WriteLine("Patients:");
+            foreach (var patient in patients)
+            {
+                Console.WriteLine($"Name: {patient.Key}, Doctor: {patient.Value["DoctorName"]}, Admitted: {patient.Value["Admitted"]}");
+            }
+        }
+    }
+}
+
+
+  
