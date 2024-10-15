@@ -47,6 +47,15 @@ namespace CreditCard
                 }
             }
         }
+
+        public static void main DeleteCard()
+        {
+
+        }
+        public static void main UpdateCard()
+        {
+            
+        }
         static void Main(string[] args)
         {
             while (true)
