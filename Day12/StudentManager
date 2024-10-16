@@ -1,63 +1,76 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Day12_Task1
+namespace Students
 {
-    internal class StudentManager
+    class StudentManager
     {
-        private List<Student> students = new List<Student>();
+        private List<StudentData> students = new List<StudentData>();
 
-        public void Add(Student stud)
+        public void Add(StudentData student)
         {
-            if (GetStudentByRegNumber(stud.RegNumber) != null)
+            if(GetStudentByNumber(student.RegNo) != null)
             {
                 Console.WriteLine("Student already exists");
                 return;
             }
 
-            students.Add(stud);
+            students.Add(student);
             Console.WriteLine("Added successfully");
         }
-        public void Search(string RegNumber)
+        public void Search(string regNo)
         {
-            var stud = GetStudentByRegNumber(RegNumber);
-            Console.WriteLine(stud);
+            var student = GetStudentByNumber(regNo);
+            Console.WriteLine(student);
         }
-        public void Update(string RegNumber, string Name, int Class)
+
+       public void Update(string regNo, string name, int standard, 
+                    string subjectOne, int markOne, 
+                    string subjectTwo, int markTwo, 
+                    string subjectThree, int markThree)
         {
-            var stud = GetStudentByRegNumber(RegNumber);
-            if (stud == null)
+            var student = GetStudentByNumber(regNo);
+            if (student == null)
             {
                 Console.WriteLine("Student not found");
                 return;
             }
 
-            stud.Name = Name;
-            stud.RegNumber = RegNumber;
+            student.Name = name;
+            student.RegNo = regNo;
+            student.Standard = standard;
+
+            student.SubjectOne = subjectOne;
+            student.MarkOne = markOne;
+            student.SubjectTwo = subjectTwo;
+            student.MarkTwo = markTwo;
+            student.SubjectThree = subjectThree;
+            student.MarkThree = markThree;
+
             Console.WriteLine("Updated successfully");
         }
-        public void Delete(string RegNumber)
+
+
+        public void Delete(string regNo)
         {
-            var stud = GetStudentByRegNumber(RegNumber);
-            if (stud == null)
+            var student = GetStudentByNumber(regNo);
+            if(student == null)
             {
                 Console.WriteLine("Student not found");
                 return;
             }
 
-            students.Remove(stud);
+            students.Remove(student);
             Console.WriteLine("Deleted successfully");
         }
-        private Student GetStudentByRegNumber(string RegNumber)
+
+        private StudentData GetStudentByNumber(string regNo)
         {
-            foreach (var stud in students)
+            foreach (var student in students)
             {
-                if (stud.RegNumber == RegNumber)
+                if (student.RegNo == regNo)
                 {
-                    return stud;
+                    return student;
                 }
             }
             return null;
