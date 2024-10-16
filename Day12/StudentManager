@@ -1,0 +1,66 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Day12_Task1
+{
+    internal class StudentManager
+    {
+        private List<Student> students = new List<Student>();
+
+        public void Add(Student stud)
+        {
+            if (GetStudentByRegNumber(stud.RegNumber) != null)
+            {
+                Console.WriteLine("Student already exists");
+                return;
+            }
+
+            students.Add(stud);
+            Console.WriteLine("Added successfully");
+        }
+        public void Search(string RegNumber)
+        {
+            var stud = GetStudentByRegNumber(RegNumber);
+            Console.WriteLine(stud);
+        }
+        public void Update(string RegNumber, string Name, int Class)
+        {
+            var stud = GetStudentByRegNumber(RegNumber);
+            if (stud == null)
+            {
+                Console.WriteLine("Student not found");
+                return;
+            }
+
+            stud.Name = Name;
+            stud.RegNumber = RegNumber;
+            Console.WriteLine("Updated successfully");
+        }
+        public void Delete(string RegNumber)
+        {
+            var stud = GetStudentByRegNumber(RegNumber);
+            if (stud == null)
+            {
+                Console.WriteLine("Student not found");
+                return;
+            }
+
+            students.Remove(stud);
+            Console.WriteLine("Deleted successfully");
+        }
+        private Student GetStudentByRegNumber(string RegNumber)
+        {
+            foreach (var stud in students)
+            {
+                if (stud.RegNumber == RegNumber)
+                {
+                    return stud;
+                }
+            }
+            return null;
+        }
+    }
+}

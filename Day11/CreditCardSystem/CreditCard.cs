@@ -8,11 +8,15 @@ namespace CreditCard
 {
     internal class CreditCard
     {
-        public string HolderName;
-        public int CardNumber;
-        public byte ExpiryMonth;
-        public byte ExpiryYear;
-        public int Cvc;
+        public string CardHolderName;
+        public string CardNumber;
+        public string Expiry;
+        public int SecurityCode;
+
+        public override string ToString()
+        {
+            return $"CardHolderName: {CardHolderName}, CardNumber: {CardNumber}, Expiry: {Expiry}, SecurityCode: {SecurityCode}";
+        }
 
     }
 }
