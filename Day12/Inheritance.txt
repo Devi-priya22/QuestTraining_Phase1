@@ -1,0 +1,29 @@
+In object-oriented programming (OOP) in C#, inheritance is a
+fundamental concept that allows a class to inherit methods, 
+properties, and fields from another class. 
+It promotes code reusability and helps to create hierarchical 
+relationships between classes. Here are the main types of inheritance in C#:
+
+1. Single Inheritance
+Description: In this type, a class inherits from only one base class.
+C# supports single inheritance, which allows a derived class to extend only one base class at a time.
+
+2. Multiple Inheritance
+Description: This type allows a class to inherit from more than one base class.
+However, C# does not support multiple inheritance directly
+(i.e., a class cannot inherit from more than one class). Instead, it can be achieved using interfaces.
+
+3. Multilevel Inheritance
+Description: In multilevel inheritance, a class can inherit from a derived class,
+thus creating a chain of inheritance.
+The bottom-most class will have access to the members of both its direct parent class and the base class.
+
+4. Hierarchical Inheritance
+Description: In this type of inheritance, multiple derived classes inherit from a single base class.
+Each derived class can have its own additional properties and methods while still 
+sharing the base class’s properties.
+
+5. Hybrid Inheritance
+Description: Hybrid inheritance is a combination of two or more types of inheritance.
+Since C# doesn’t support multiple inheritance directly through classes, 
+hybrid inheritance can be implemented using a combination of interfaces and class inheritance.
