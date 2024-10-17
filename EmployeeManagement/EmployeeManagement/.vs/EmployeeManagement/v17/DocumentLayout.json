@@ -1,0 +1,126 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\user\\source\\repos\\EmployeeManagement\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A3525E1B-ABB2-4E94-95AD-2510D2AE798E}|EmployeeManagement\\EmployeeManagement.csproj|c:\\users\\user\\source\\repos\\employeemanagement\\employeemanagement\\entities\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3525E1B-ABB2-4E94-95AD-2510D2AE798E}|EmployeeManagement\\EmployeeManagement.csproj|solutionrelative:employeemanagement\\entities\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3525E1B-ABB2-4E94-95AD-2510D2AE798E}|EmployeeManagement\\EmployeeManagement.csproj|c:\\users\\user\\source\\repos\\employeemanagement\\employeemanagement\\employeemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3525E1B-ABB2-4E94-95AD-2510D2AE798E}|EmployeeManagement\\EmployeeManagement.csproj|solutionrelative:employeemanagement\\employeemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3525E1B-ABB2-4E94-95AD-2510D2AE798E}|EmployeeManagement\\EmployeeManagement.csproj|c:\\users\\user\\source\\repos\\employeemanagement\\employeemanagement\\services\\jsonfilestorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3525E1B-ABB2-4E94-95AD-2510D2AE798E}|EmployeeManagement\\EmployeeManagement.csproj|solutionrelative:employeemanagement\\services\\jsonfilestorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3525E1B-ABB2-4E94-95AD-2510D2AE798E}|EmployeeManagement\\EmployeeManagement.csproj|c:\\users\\user\\source\\repos\\employeemanagement\\employeemanagement\\services\\istorageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3525E1B-ABB2-4E94-95AD-2510D2AE798E}|EmployeeManagement\\EmployeeManagement.csproj|solutionrelative:employeemanagement\\services\\istorageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3525E1B-ABB2-4E94-95AD-2510D2AE798E}|EmployeeManagement\\EmployeeManagement.csproj|c:\\users\\user\\source\\repos\\employeemanagement\\employeemanagement\\entities\\types\\employmenttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3525E1B-ABB2-4E94-95AD-2510D2AE798E}|EmployeeManagement\\EmployeeManagement.csproj|solutionrelative:employeemanagement\\entities\\types\\employmenttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3525E1B-ABB2-4E94-95AD-2510D2AE798E}|EmployeeManagement\\EmployeeManagement.csproj|c:\\users\\user\\source\\repos\\employeemanagement\\employeemanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3525E1B-ABB2-4E94-95AD-2510D2AE798E}|EmployeeManagement\\EmployeeManagement.csproj|solutionrelative:employeemanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 160,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "JsonFileStorage.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\EmployeeManagement\\EmployeeManagement\\Services\\JsonFileStorage.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement\\Services\\JsonFileStorage.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\EmployeeManagement\\EmployeeManagement\\Services\\JsonFileStorage.cs",
+              "RelativeToolTip": "EmployeeManagement\\Services\\JsonFileStorage.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAA5wDMAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-17T09:20:37.127Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IStorageService.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\EmployeeManagement\\EmployeeManagement\\Services\\IStorageService.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement\\Services\\IStorageService.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\EmployeeManagement\\EmployeeManagement\\Services\\IStorageService.cs",
+              "RelativeToolTip": "EmployeeManagement\\Services\\IStorageService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-17T09:18:07.386Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EmploymentType.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\EmployeeManagement\\EmployeeManagement\\Entities\\Types\\EmploymentType.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement\\Entities\\Types\\EmploymentType.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\EmployeeManagement\\EmployeeManagement\\Entities\\Types\\EmploymentType.cs",
+              "RelativeToolTip": "EmployeeManagement\\Entities\\Types\\EmploymentType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-17T09:13:30.029Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\EmployeeManagement\\EmployeeManagement\\Entities\\Employee.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement\\Entities\\Employee.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\EmployeeManagement\\EmployeeManagement\\Entities\\Employee.cs",
+              "RelativeToolTip": "EmployeeManagement\\Entities\\Employee.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-17T09:10:56.322Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EmployeeManager.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\EmployeeManagement\\EmployeeManagement\\EmployeeManager.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement\\EmployeeManager.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\EmployeeManagement\\EmployeeManagement\\EmployeeManager.cs",
+              "RelativeToolTip": "EmployeeManagement\\EmployeeManager.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAArwDsAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-17T09:10:26.231Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\EmployeeManagement\\EmployeeManagement\\Program.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement\\Program.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\EmployeeManagement\\EmployeeManagement\\Program.cs",
+              "RelativeToolTip": "EmployeeManagement\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-17T09:08:46.945Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
