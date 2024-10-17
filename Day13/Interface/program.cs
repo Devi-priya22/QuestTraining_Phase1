@@ -22,7 +22,7 @@ namespace interfaces
     {
         public string Name { get; set; }
 
-        public const string CollegeName = "Collagge X";
+        public const string CollegeName = "College X";
 
         public void Display()
         {
