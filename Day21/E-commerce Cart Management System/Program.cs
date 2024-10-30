@@ -47,7 +47,7 @@ namespace CartManagemntSystem
                         Console.WriteLine("Item removed from cart.");
                         break;
 
-                    case "4": 
+                   case "4": 
                         Console.Write("Enter discount type (percentage/flat): ");
                         string discountType = Console.ReadLine().ToLower();
                         if (discountType == "percentage")
@@ -60,7 +60,7 @@ namespace CartManagemntSystem
                         {
                             Console.Write("Enter flat discount amount: ");
                             decimal amount = decimal.Parse(Console.ReadLine());
-                            cart.AddDiscount(new FlatDiscount(amount));
+                            cart.AddDis count(new FlatDiscount(amount));
                         }
                         else
                         {
