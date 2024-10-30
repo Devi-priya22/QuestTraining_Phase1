@@ -8,6 +8,6 @@ namespace SocialMediaNotificationSystem.Interfaces
 {
     internal interface IComment
     {
-        void OnCommentNotificationReceived();
+        void CommentNotificationReceived();
     }
 }

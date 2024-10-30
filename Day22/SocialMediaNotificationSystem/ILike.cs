@@ -8,6 +8,6 @@ namespace SocialMediaNotificationSystem.Interfaces
 {
     internal interface ILikeNotification
     {
-        void OnLikeNotificationReceived();
+        void LikeNotificationReceived();
     }
 }

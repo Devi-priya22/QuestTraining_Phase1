@@ -8,6 +8,6 @@ namespace SocialMediaNotificationSystem.Interfaces
 {
     internal interface IFollowNotification
     {
-        void OnFollowNotificationReceived();
+        void FollowNotificationReceived();
     }
 }
